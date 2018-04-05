@@ -108,4 +108,37 @@ response header:
   charset=utf-8'
 } 
 
-
+>>> from geocode import getGeocodeLocation
+>>> getGeocodeLocation("Dallas, Texas")
+{u'status': u'OK',
+u'results':
+  [{u'geometry':
+    {u'location_type': u'APPROXIMATE',
+    u'bounds':
+      {u'northeast':
+        {u'lat': 33.0237921, u'lng': -96.4637379},
+      u'southwest':
+        {u'lat': 32.617537, u'lng': -96.999347}},
+      u'viewport':
+        {u'northeast': {u'lat': 33.0237921, u'lng': -96.4637379},
+        u'southwest': {u'lat': 32.617537, u'lng': -96.999347}},
+      u'location': {u'lat': 32.7766642, u'lng': -96.79698789999999}
+    },
+    u'address_components':
+      [{u'long_name': u'Dallas',
+      u'types': [u'locality', u'political'],
+      u'short_name': u'Dallas'},
+      {u'long_name': u'Dallas County',
+      u'types': [u'administrative_area_level_2', u'political'],
+      u'short_name': u'Dallas County'},
+      {u'long_name': u'Texas',
+      u'types': [u'administrative_area_level_1', u'political'],
+      u'short_name': u'TX'},
+      {u'long_name': u'United States',
+      u'types': [u'country', u'political'],
+      u'short_name': u'US'}],
+    u'place_id': u'ChIJS5dFe_cZTIYRj2dH9qSb7Lk',
+    u'formatted_address': u'Dallas, TX, USA',
+    u'types': [u'locality', u'political']
+  }]
+}
