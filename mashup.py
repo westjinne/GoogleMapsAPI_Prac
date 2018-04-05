@@ -17,14 +17,17 @@ def findARestaurant(mealType, location):
         myLocation = getGeocodeLocation(location)
         latitude = myLocation[0]
         longitude = myLocation[1]
-
 #2. use foursquare api to find a nearby restaurant with the latitude, longitude, and mealType strings.
 #hint: format for url will be something like https://api.foursquare.com/v2/venues/search?client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=20130815&ll=40.7,-74&query=sushi
         url = ('https://api.foursquare.com/v2/venues/search?client_id=%s&client_secret=%s&ll=%s,%s&query=%s&v=20180404' % (foursquare_client_id, foursquare_client_secret, latitude, longitude, mealType))
         h = httplib2.Http()
         response, content = h.request(url, 'GET')
         result = json.loads(content)
-        return result
+#        print "response header: %s \n \n" % response
+#        print
+        prefix = result['response']['venues'][0]['categories'][0]['icon']['prefix']
+        suffix = result['response']['venues'][0]['categories'][0]['icon']['suffix']
+        return prefix, suffix
 
 #3. grab the first restaurant
 
