@@ -23,32 +23,31 @@ def findARestaurant(mealType, location):
         h = httplib2.Http()
         response, content = h.request(url, 'GET')
         result = json.loads(content)
-
-        resName = result['response']['venues'][0]['name']
+#3. grab the first restaurant
+        firstRes = result['response']['venues'][0]
+        resName = firstRes['name']
         sys.stdout.write("Restaurant Name: %s" % resName)
         print
 
-        resAddr = result['response']['venues'][0]['location']['formattedAddress']
+        resAddr = firstRes['location']['formattedAddress']
 
         sys.stdout.write("Restaurant Address: ")
         for i in resAddr:
             sys.stdout.write("%s " % i)
         print
 """
-        photoUrlID = result['response']['venues'][0]['id']
+        photoUrlID = firstRes['id']
         photoUrl = ('https://api.foursquare.com/v2/venues/%s/photos?client_id=%s&v=20150603&client_secret=%s' % (photoUrlID, foursquare_client_id, foursquare_client_secret))
         photoResult = json.loads(h.request(photoUrl, 'GET'))
 """
 #Photo url part must be updated
-        
-        prefix = result['response']['venues'][0]['categories'][0]['icon']['prefix']
-        suffix = result['response']['venues'][0]['categories'][0]['icon']['suffix']
+#        prefix = firstRes['categories'][0]['icon']['prefix']
+#        suffix = firstRes['categories'][0]['icon']['suffix']
 #        return prefix, suffix
-        sys.stdout.write("Image: %s%s"%(prefix, suffix))
-        print
+#        sys.stdout.write("Image: %s%s"%(prefix, suffix))
+#        print
 
 #sys.stdout.write("%s - %.2f" % (date, rate))
-#3. grab the first restaurant
 
 #4. get a 300x300 picture of the restaurant using the venue_id (can be changed by me, by altering the 300x300 value in the url of replacing it with 'original' to get the original picture)
 
