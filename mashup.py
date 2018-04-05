@@ -23,12 +23,31 @@ def findARestaurant(mealType, location):
         h = httplib2.Http()
         response, content = h.request(url, 'GET')
         result = json.loads(content)
-#        print "response header: %s \n \n" % response
-#        print
+
+        resName = result['response']['venues'][0]['name']
+        sys.stdout.write("Restaurant Name: %s" % resName)
+        print
+
+        resAddr = result['response']['venues'][0]['location']['formattedAddress']
+
+        sys.stdout.write("Restaurant Address: ")
+        for i in resAddr:
+            sys.stdout.write("%s " % i)
+        print
+"""
+        photoUrlID = result['response']['venues'][0]['id']
+        photoUrl = ('https://api.foursquare.com/v2/venues/%s/photos?client_id=%s&v=20150603&client_secret=%s' % (photoUrlID, foursquare_client_id, foursquare_client_secret))
+        photoResult = json.loads(h.request(photoUrl, 'GET'))
+"""
+#Photo url part must be updated
+        
         prefix = result['response']['venues'][0]['categories'][0]['icon']['prefix']
         suffix = result['response']['venues'][0]['categories'][0]['icon']['suffix']
-        return prefix, suffix
+#        return prefix, suffix
+        sys.stdout.write("Image: %s%s"%(prefix, suffix))
+        print
 
+#sys.stdout.write("%s - %.2f" % (date, rate))
 #3. grab the first restaurant
 
 #4. get a 300x300 picture of the restaurant using the venue_id (can be changed by me, by altering the 300x300 value in the url of replacing it with 'original' to get the original picture)
@@ -38,15 +57,22 @@ def findARestaurant(mealType, location):
 #6. if no image is available, insert default a image url
 
 #7. return a dictionary containing the restaurant name, address, and image url
-"""
+
 if __name__ == '__main__':
     findARestaurant("Pizza", "Tokyo, Japan")
+    print
     findARestaurant("Tacos", "Jakarta, Indonesia")
+    print
     findARestaurant("Tapas", "Maputo, Mozambique")
+    print
     findARestaurant("Falafel", "Cairo, Egypt")
+    print
     findARestaurant("Spaghetti", "New Delhi, India")
+    print
     findARestaurant("Cappuccino", "Geneva, Switzerland")
+    print
     findARestaurant("Sushi", "Los Angeles, California")
+    print
     findARestaurant("Steak", "La Paz, Bolivia")
+    print
     findARestaurant("Gyros", "Sydney, Australia")
-"""
