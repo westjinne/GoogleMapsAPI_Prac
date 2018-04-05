@@ -11,17 +11,54 @@ u'meta':
 u'response': 
   {u'venues': 
     [
-    {u'verified': False, u'name': u'PIZZA SALVATORE CUOMO & BAR \u65b0\u5bbf', u'referralId': u'v-1522835312', u'venueChains': [], u'url': u'http://www.salvatore.jp/restaurant/shinjuku/', u'hereNow': 
-      {u'count': 0, u'groups': [], u'summary': u'Nobody here'}, u'specials': 
-        {u'count': 0, u'items': []}, u'allowMenuUrlEdit': True, u'contact': 
-          {u'phone': u'+81333430065', u'formattedPhone': u'+81 3-3343-0065'}, u'hasPerk': False, u'location': 
-            {u'distance': 454, u'labeledLatLngs': 
-              [{u'lat': 35.692561209307335, u'lng': 139.6950164474649, u'label': u'display'}], u'city': u'\u6771\u4eac', u'cc': u'JP', u'country': u'\u65e5\u672c', u'postalCode': u'163-0590', u'state': u'\u6771\u4eac\u90fd', u'formattedAddress': 
-              [u'\u897f\u65b0\u5bbf1-26-2 (\u65b0\u5bbf\u91ce\u6751\u30d3\u30eb B1F)', u'\u65b0\u5bbf\u533a, \u6771\u4eac\u90fd', u'163-0590', u'\u65e5\u672c'], u'crossStreet': u'\u65b0\u5bbf\u91ce\u6751\u30d3\u30eb B1F', u'address': u'\u897f\u65b0\u5bbf1-26-2', u'lat': 35.692561209307335, u'lng': 139.6950164474649}, u'beenHere': 
-                {u'lastCheckinExpiredAt': 0}, u'stats': 
-                  {u'checkinsCount': 1615, u'tipCount': 23, u'usersCount': 1121}, u'id': u'4b95c184f964a5201eb234e3', u'categories': 
-                    [{u'pluralName': u'Pizza Places', u'primary': True, u'name': u'Pizza Place', u'shortName': u'Pizza', u'id': u'4bf58dd8d48988d1ca941735', u'icon': 
-                      {u'prefix': u'https://ss3.4sqi.net/img/categories_v2/food/pizza_', u'suffix': u'.png'}}]}, 
+    {u'verified': False, 
+    u'name': u'PIZZA SALVATORE CUOMO & BAR \u65b0\u5bbf', 
+    u'referralId': u'v-1522835312', 
+    u'venueChains': [], 
+    u'url': u'http://www.salvatore.jp/restaurant/shinjuku/', 
+    u'hereNow': 
+      {u'count': 0, 
+      u'groups': [], 
+      u'summary': u'Nobody here'}, 
+    u'specials': {u'count': 0, u'items': []}, 
+    u'allowMenuUrlEdit': True, 
+    u'contact': 
+      {u'phone': u'+81333430065', 
+      u'formattedPhone': u'+81 3-3343-0065'}, 
+    u'hasPerk': False, 
+    u'location': 
+      {u'distance': 454, 
+      u'labeledLatLngs': 
+        [{u'lat': 35.692561209307335, 
+        u'lng': 139.6950164474649, 
+        u'label': u'display'}], 
+      u'city': u'\u6771\u4eac', 
+      u'cc': u'JP', 
+      u'country': u'\u65e5\u672c', 
+      u'postalCode': u'163-0590', 
+      u'state': u'\u6771\u4eac\u90fd', 
+      u'formattedAddress': 
+          [u'\u897f\u65b0\u5bbf1-26-2 (\u65b0\u5bbf\u91ce\u6751\u30d3\u30eb B1F)', u'\u65b0\u5bbf\u533a, \u6771\u4eac\u90fd', u'163-0590', u'\u65e5\u672c'],
+      u'crossStreet': u'\u65b0\u5bbf\u91ce\u6751\u30d3\u30eb B1F', 
+      u'address': u'\u897f\u65b0\u5bbf1-26-2', 
+      u'lat': 35.692561209307335, 
+      u'lng': 139.6950164474649}, 
+      u'beenHere': 
+            {u'lastCheckinExpiredAt': 0}, 
+            u'stats': 
+              {u'checkinsCount': 1615, 
+              u'tipCount': 23, 
+              u'usersCount': 1121}, 
+            u'id': u'4b95c184f964a5201eb234e3', 
+            u'categories': 
+                [{u'pluralName': u'Pizza Places', 
+                u'primary': True, 
+                u'name': u'Pizza Place', 
+                u'shortName': u'Pizza', 
+                u'id': u'4bf58dd8d48988d1ca941735', 
+                u'icon': 
+                  {u'prefix': u'https://ss3.4sqi.net/img/categories_v2/food/pizza_', u'suffix': u'.png'}}]}, 
+                  
     {u'verified': False, u'name': u'PIZZA SALVATORE CUOMO \u4ee3\u3005\u6728', u'referralId': u'v-1522835312', u'venueChains': [], u'url': u'http://www.salvatore.jp', u'hereNow': 
       {u'count': 0, u'groups': [], u'summary': u'Nobody here'}, u'specials': 
         {u'count': 0, u'items': []}, u'allowMenuUrlEdit': True, u'contact': 
@@ -43,4 +80,32 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> from geocode import getGeocodeLocation
 >>> from mashup import findARestaurant
 >>> findARestaurant("Pizza", "Tokyo, Japan")
-response header: {'content-length': '33976', 'x-rate-limit-key': '111.91.140.88', 'x-ratelimit-path': '/v2/venues/search', 'vary': 'Accept-Encoding,User-Agent,Accept-Language', 'x-ex': 'fastly_cdn', 'via': '1.1 varnish', 'x-cache-hits': '0', 'status': '200', 'x-ratelimit-remaining': '4998', 'x-served-by': 'cache-nrt6151-NRT', 'x-cache': 'MISS', 'transfer-encoding': 'chunked', 'accept-ranges': 'bytes', 'tracer-time': '98', '-content-encoding': 'gzip', 'date': 'Thu, 05 Apr 2018 03:00:57 GMT', 'access-control-allow-origin': '*', 'content-location': 'https://api.foursquare.com/v2/venues/search?client_id=IEFTGLJWGSSXVXUOTNQS2IR5MZQH3JH0GBXCWSKNEBXHCMLJ&client_secret=LNGMY5D55PNKNSXBQFCGOFT31AO4KYIEACZRLO1QD2S123RB&ll=35.6894875,139.6917064&query=Pizza&v=20180404', 'strict-transport-security': 'max-age=31536000', 'server': 'nginx', 'connection': 'keep-alive', 'x-ratelimit-limit': '5000', 'content-type': 'application/json; charset=utf-8'} 
+response header:
+{
+  'content-length': '33976',
+  'x-rate-limit-key': '111.91.140.88',
+  'x-ratelimit-path': '/v2/venues/search',
+  'vary': 'Accept-Encoding,User-Agent,Accept-Language',
+  'x-ex': 'fastly_cdn',
+  'via': '1.1 varnish',
+  'x-cache-hits': '0',
+  'status': '200',
+  'x-ratelimit-remaining': '4998',
+  'x-served-by': 'cache-nrt6151-NRT',
+  'x-cache': 'MISS',
+  'transfer-encoding': 'chunked',
+  'accept-ranges': 'bytes',
+  'tracer-time': '98',
+  '-content-encoding': 'gzip',
+  'date': 'Thu, 05 Apr 2018 03:00:57 GMT',
+  'access-control-allow-origin': '*',
+  'content-location':'https://api.foursquare.com/v2/venues/search?client_id=IEFTGLJWGSSXVXUOTNQS2IR5MZQH3JH0GBXCWSKNEBXHCMLJ&client_secret=LNGMY5D55PNKNSXBQFCGOFT31AO4KYIEACZRLO1QD2S123RB&ll=35.6894875,139.6917064&query=Pizza&v=20180404',
+  'strict-transport-security': 'max-age=31536000',
+  'server': 'nginx',
+  'connection': 'keep-alive',
+  'x-ratelimit-limit': '5000',
+  'content-type': 'application/json;
+  charset=utf-8'
+} 
+
+
