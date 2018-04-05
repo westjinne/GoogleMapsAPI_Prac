@@ -57,7 +57,10 @@ u'response':
       u'shortName': u'Pizza',
       u'id': u'4bf58dd8d48988d1ca941735',
       u'icon':
-        {u'prefix': u'https://ss3.4sqi.net/img/categories_v2/food/pizza_', u'suffix': u'.png'}}]}, 
+        {u'prefix': u'https://ss3.4sqi.net/img/categories_v2/food/pizza_', 
+        u'suffix': u'.png'}}
+    ]
+  },
                   
     {u'verified': False, u'name': u'PIZZA SALVATORE CUOMO \u4ee3\u3005\u6728', u'referralId': u'v-1522835312', u'venueChains': [], u'url': u'http://www.salvatore.jp', u'hereNow': 
       {u'count': 0, u'groups': [], u'summary': u'Nobody here'}, u'specials': 
